@@ -1,4 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import * as bcrypt from 'bcryptjs';
 
 @Entity('usuarios')
 export class UserEntity{
@@ -17,4 +18,6 @@ export class UserEntity{
     //token
     @Column()
     salt: string;
+
+   
 }
